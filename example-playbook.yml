@@ -1,0 +1,19 @@
+---
+- name: Install cmatrix, cowsay, and sl
+  hosts: Konstantinov
+  become: yes
+  tasks:
+    - name: Install cmatrix package
+      apt:
+        name: cmatrix
+        state: latest
+
+    - name: Install cowsay package
+      apt:
+        name: cowsay
+        state: latest
+
+    - name: Install sl package
+      apt:
+        name: sl
+        state: latest
